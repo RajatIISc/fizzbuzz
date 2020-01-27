@@ -3,11 +3,17 @@ Deep Learning project 1
 
 
 import numpy as np
+
 import torch
+
 import torch.nn as nn
+
 import torch.nn.functional as F
+
 from sklearn.metrics import accuracy_score
+
 import pickle
+
 import getopt, sys
 
 
