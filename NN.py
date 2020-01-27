@@ -51,9 +51,9 @@ def output_data(filename):
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.fc1 = nn.Linear(10,15)
-        self.fc2 = nn.Linear(15,8)
-        self.fc3 = nn.Linear(8,4)
+        self.fc1 = nn.Linear(10,8)
+        self.fc2 = nn.Linear(8,6)
+        self.fc3 = nn.Linear(6,4)
     def forward(self, x):
         x = F.sigmoid(self.fc1(x))
         x = F.sigmoid(self.fc2(x))
