@@ -79,9 +79,14 @@ def software2(filename):
     Y_pred = software2(X)
     Y_pred = np.argmax(np.array(Y_pred.detach().numpy()), axis=1)
     test_output = [str(i) for i in Y_pred]
+    input_samples = []
+    with open(filename) as openfileobject:
+        for line in openfileobject:
+            line = line.rstrip("\n")
+            input_samples.append(line)
     for i, item in enumerate(Y_pred):
         if(item==0):
-            test_output[i] = i+1
+            test_output[i] = input_samples[i]
         elif(item==1):
             test_output[i] = "fizzbuzz"
         elif(item==2):
